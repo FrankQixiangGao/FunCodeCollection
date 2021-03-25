@@ -1,10 +1,6 @@
-# 作者：hhh5460
-# 时间：2017年6月3日
-
 import itertools
 
 def twentyfour(cards):
-    '''史上最短计算24点代码'''
     for nums in itertools.permutations(cards): # 四个数
         for ops in itertools.product('+-*/', repeat=3): # 三个运算符（可重复！）
             # 构造三种中缀表达式 (bsd)
@@ -21,9 +17,6 @@ def twentyfour(cards):
     
     return 'Not found!'
 
-
-# 测试
-# 数据来源：http://www.cnblogs.com/grenet/archive/2013/02/28/2936965.html
 cards =[[1,1,1,8],
         [1,1,2,6],
         [1,1,2,7],
